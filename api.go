@@ -528,6 +528,7 @@ func (c *Client) do(req *http.Request) (resp *http.Response, err error) {
 		}
 	}()
 	req.Header.Add("X-Token", "minio00_e0_5d_10_39_32")
+	req.Header.Add("X-Real-IP", "172.16.8.20")
 
 	resp, err = c.httpClient.Do(req)
 	if err != nil {
