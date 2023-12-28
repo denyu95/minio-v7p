@@ -824,9 +824,11 @@ func (c *Client) newRequest(ctx context.Context, method string, metadata request
 		if signerType.IsV2() {
 			// Presign URL with signature v2.
 			req = signer.PreSignV2(*req, accessKeyID, secretAccessKey, metadata.expires, isVirtualHost)
+			fmt.Println("用V2signerType", isVirtualHost)
 		} else if signerType.IsV4() {
 			// Presign URL with signature v4.
 			req = signer.PreSignV4(*req, accessKeyID, secretAccessKey, sessionToken, location, metadata.expires)
+			fmt.Println("用V4signerType")
 		}
 		return req, nil
 	}
