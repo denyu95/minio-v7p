@@ -25,9 +25,9 @@ import (
 	"path"
 	"sync"
 
-	"github.com/minio/minio-go/v7/pkg/credentials"
-	"github.com/minio/minio-go/v7/pkg/s3utils"
-	"github.com/minio/minio-go/v7/pkg/signer"
+	"github.com/denyu95/minio-v7p/pkg/credentials"
+	"github.com/denyu95/minio-v7p/pkg/s3utils"
+	"github.com/denyu95/minio-v7p/pkg/signer"
 )
 
 // bucketLocationCache - Provides simple mechanism to hold bucket

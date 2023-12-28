@@ -21,8 +21,8 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/minio/minio-go/v7/pkg/credentials"
-	"github.com/minio/minio-go/v7/pkg/policy"
+	"github.com/denyu95/minio-v7p/pkg/credentials"
+	"github.com/denyu95/minio-v7p/pkg/policy"
 )
 
 // Tests valid hosts for location.

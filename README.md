@@ -31,7 +31,7 @@ import (
 	"log"
 
 	"github.com/minio/minio-go/v7"
-	"github.com/minio/minio-go/v7/pkg/credentials"
+	"github.com/denyu95/minio-v7p/pkg/credentials"
 )
 
 func main() {
@@ -79,7 +79,7 @@ import (
 	"log"
 
 	"github.com/minio/minio-go/v7"
-	"github.com/minio/minio-go/v7/pkg/credentials"
+	"github.com/denyu95/minio-v7p/pkg/credentials"
 )
 
 func main() {
@@ -150,7 +150,7 @@ fsutil file createnew "C:\Users\<username>\Desktop\sample.txt" 20480
 ```sh
 go mod init example/FileUploader
 go get github.com/minio/minio-go/v7
-go get github.com/minio/minio-go/v7/pkg/credentials
+go get github.com/denyu95/minio-v7p/pkg/credentials
 go run FileUploader.go
 ```
 
