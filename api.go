@@ -742,6 +742,7 @@ func (c *Client) executeMethod(ctx context.Context, method string, metadata requ
 
 // newRequest - instantiate a new HTTP request for a given method.
 func (c *Client) newRequest(ctx context.Context, method string, metadata requestMetadata) (req *http.Request, err error) {
+	fmt.Println("newRequest")
 	// If no method is supplied default to 'POST'.
 	if method == "" {
 		method = http.MethodPost
@@ -818,6 +819,7 @@ func (c *Client) newRequest(ctx context.Context, method string, metadata request
 				return nil, errInvalidArgument("Extra signed headers for Presign with Signature V2 is not supported.")
 			}
 			for k, v := range metadata.extraPresignHeader {
+				fmt.Println("用extraPresignHeader", k, v)
 				req.Header.Set(k, v[0])
 			}
 		}
