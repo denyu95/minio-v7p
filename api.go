@@ -527,9 +527,9 @@ func (c *Client) do(req *http.Request) (resp *http.Response, err error) {
 			c.markOffline()
 		}
 	}()
-	fmt.Printf("dodododododd-----%+v\n", req.Header)
 	req.Header.Add("X-Token", "minio00_e0_5d_10_39_32")
-	req.Header.Add("X-Real-IP", "172.16.8.20")
+	//req.Header.Add("X-Real-IP", "172.16.8.20")
+	fmt.Printf("dodododododd-----%+v\n", req.Header)
 
 	resp, err = c.httpClient.Do(req)
 	if err != nil {
